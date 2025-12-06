@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-
+export const runtime = "nodejs";
 export async function GET() {
   const categories = await prisma.category.findMany({
     select: {
@@ -51,3 +51,4 @@ export async function POST(req) {
 
   return new Response(JSON.stringify(category), { status: 201 });
 }
+

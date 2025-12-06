@@ -1,5 +1,5 @@
 import prisma from "@/lib/prisma";
-
+export const runtime = "nodejs";
 // جلب جميع المنتجات مع بيانات الكاتيجوري
 export async function GET() {
   const products = await prisma.product.findMany({

@@ -1,5 +1,7 @@
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
+export const runtime = "nodejs";
+
 
 export async function POST(req) {
   const { email, password } = await req.json();
